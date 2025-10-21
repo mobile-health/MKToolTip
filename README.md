@@ -1,19 +1,16 @@
 [![Languages](https://img.shields.io/badge/language-swift%204.2%20|%20objc-FF69B4.svg?style=plastic)](#) <br/>
 
-Description
---------------
+## Description
 
-```MKToolTip``` is a customizable tooltip view written in Swift that can be used as a informative tip inside your both Swift and Objective-C projects.
+`MKToolTip` is a customizable tooltip view written in Swift that can be used as a informative tip inside your both Swift and Objective-C projects.
 
 <img src="https://github.com/metinkilicaslan/MKToolTip/blob/master/MKToolTip.gif" width="320">
 
-Requirements
------------------------------
+## Requirements
 
 - iOS 9.0+
 
-Installation
---------------
+## Installation
 
 ### CocoaPods
 
@@ -39,14 +36,21 @@ github "metinkilicaslan/MKToolTip"
 
 Run `carthage update` to build the framework and drag the built `MKToolTip.framework` into your Xcode project.
 
+### Swift Package Manager
+
+You can add MKToolTip to your project using Swift Package Manager. In Xcode go to File → Add Packages... and enter the repository URL, or add it to your Package.swift:
+
+```swift
+.package(url: "https://github.com/mobile-health/MKToolTip.git", from: "1.0.0")
+```
+
 ### Manually
 
 If you prefer not to use dependency managers, you can integrate MKToolTip into your project manually.
 
-Usage
---------------
+## Usage
 
-1) First you should customize the preferences:
+1. First you should customize the preferences:
 
 ```swift
 let gradientColor = UIColor(red: 0.886, green: 0.922, blue: 0.941, alpha: 1.000)
@@ -57,15 +61,14 @@ preference.drawing.arrow.tipCornerRadius = 0
 preference.drawing.message.color = .black
 ```
 
-2) Secondly call the ``showToolTip(identifier: title: message: arrowPosition: preferences: delegate:)`` method:
+2. Secondly call the `showToolTip(identifier: title: message: arrowPosition: preferences: delegate:)` method:
 
 ```swift
 let view = UIView()
 view.showToolTip(identifier: "identifier", title: "Dapibus", message: "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.", arrowPosition: .top)
 ```
 
-Public interface
---------------
+## Public interface
 
 ### Delegate
 
@@ -88,8 +91,6 @@ public extension UIBarItem {
 }
 ```
 
-
-License
---------------
+## License
 
 MIT License, Copyright (c) 2018 Metin Kilicaslan, [@metinkilicaslan](https://twitter.com/metinkilicaslan)
